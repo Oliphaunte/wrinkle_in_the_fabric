@@ -1,0 +1,25 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  three:
+    specifier: ^0.160.0
+    version: 0.160.0
+
+devDependencies:
+  topbar:
+    specifier: ^2.0.2
+    version: 2.0.2
+
+packages:
+
+  /three@0.160.0:
+    resolution: {integrity: sha512-DLU8lc0zNIPkM7rH5/e1Ks1Z8tWCGRq6g8mPowdDJpw1CFBJMU7UoJjC6PefXW7z//SSl0b2+GCw14LB+uDhng==}
+    dev: false
+
+  /topbar@2.0.2:
+    resolution: {integrity: sha512-hCKoSaWxXqGIgjag8rIVajysE41as7ti5z9GDO5rcx2zmII1/rY5zvO9IgKwbf50HL82EzlimL6OmPYPUgbpEw==}
+    dev: true
