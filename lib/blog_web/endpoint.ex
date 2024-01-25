@@ -6,9 +6,11 @@ defmodule BlogWeb.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
+    domain: Blog.host(),
     key: "_blog_key",
     signing_salt: "ac8E1foS",
-    same_site: "Lax"
+    same_site: "Lax",
+    secure: true
   ]
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
