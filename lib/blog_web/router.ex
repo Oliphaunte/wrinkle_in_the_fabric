@@ -17,7 +17,10 @@ defmodule BlogWeb.Router do
   scope "/", BlogWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live("/", IndexLive, :index)
+    live("/posts", IndexLive, :index)
+    live("/posts/:post", Blog.PostLive, :index)
+    live("/tags/:tag", IndexLive, :index)
   end
 
   # Other scopes may use custom stacks.

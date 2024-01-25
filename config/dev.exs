@@ -15,9 +15,18 @@ config :blog, Blog.Repo,
 # watchers to your application. For example, we can use it
 # to bundle .js and .css sources.
 config :blog, BlogWeb.Endpoint,
+  env: :dev,
+  server: true,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
+  url: [host: "wrinkleinthefabric.lvh.me", port: 4001, scheme: "https"],
   http: [ip: {127, 0, 0, 1}, port: 4000],
+  https: [
+    port: 4001,
+    cipher_suite: :strong,
+    certfile: "priv/cert/selfsigned.pem",
+    keyfile: "priv/cert/selfsigned_key.pem"
+  ],
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
@@ -56,7 +65,8 @@ config :blog, BlogWeb.Endpoint,
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/blog_web/(controllers|live|components)/.*(ex|heex)$"
+      ~r"lib/blog_web/(controllers|live|components)/.*(ex|heex)$",
+      ~r"posts/*/.*(md)$"
     ]
   ]
 

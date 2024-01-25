@@ -3,6 +3,49 @@
 @import 'tailwindcss/utilities';
 
 /* This file is for your main application CSS */
+@layer components {
+  h1 {
+    @apply font-global;
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    @apply font-global;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  h3 {
+    @apply font-global;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    @apply font-global;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  h5 {
+    @apply font-global;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  h6 {
+    @apply font-global;
+    font-weight: normal;
+    font-size: 1rem;
+  }
+
+  p {
+    @apply font-global;
+  }
+}
+
+/* This file is for your main application CSS */
 body,
 html {
   margin: 0;
@@ -11,10 +54,25 @@ html {
   overflow: hidden;
 }
 
+/* Hide scrollbars in WebKit browsers */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbars in Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbars in IE and Edge */
+* {
+  -ms-overflow-style: none;
+}
+
 .space-background {
   position: relative;
-  z-index: 1; /* Above the canvas */
-  background-color: #000; /* Dark background */
+  z-index: 1;
+  background-color: #000;
   height: 100%;
   overflow: hidden;
 }
@@ -35,7 +93,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0; /* Behind everything else */
+  z-index: 0;
 }
 
 .page-container {
@@ -46,4 +104,46 @@ html {
   padding: 24px;
   margin: 0 auto;
   opacity: 80%;
+  transition: all 0.3s;
+}
+
+.page-container:hover,
+.page-container:focus,
+.page-container:focus-within {
+  opacity: 1;
+}
+
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-flex;
+  position: relative;
+}
+
+.part {
+  transition: opacity 0.3s ease;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.part-w,
+.part-f {
+  display: inline-block;
+  opacity: 1;
+}
+
+.part-w-expand,
+.part-f-expand {
+  display: inline-block;
+  opacity: 0;
+  max-width: 0;
+  transition: max-width 0.3s ease, opacity 0.3s ease;
+}
+
+.header:hover .part-w-expand,
+.header:hover .part-f-expand {
+  opacity: 1;
+  max-width: 200px;
 }

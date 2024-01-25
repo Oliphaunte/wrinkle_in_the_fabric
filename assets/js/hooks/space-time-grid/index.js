@@ -17,7 +17,7 @@ export const SpaceTimeGrid = {
         
         // Gravity well effect based on mouse position
         float distToMouse = distance(pos, u_mouse3D);
-        pos.z += exp(-distToMouse) * 0.4; // Adjust strength as needed
+        pos.z += exp(-distToMouse) * 0.9; // Adjust strength as needed
         
         // Ripple effect based on click position
         if (u_timeSinceClick >= 0.0) {
@@ -67,6 +67,7 @@ export const SpaceTimeGrid = {
         wireframe: true,
       })
       planeMesh = new THREE.Mesh(planeGeometry, planeMaterial)
+
       scene.add(planeMesh)
 
       window.addEventListener('resize', onWindowResize, false)
