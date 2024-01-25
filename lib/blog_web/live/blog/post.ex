@@ -9,18 +9,18 @@ defmodule BlogWeb.Blog.PostLive do
   @impl true
   def render(assigns) do
     ~H"""
-    <div class="mx-auto px-4 max-w-4xl h-full overflow-scroll">
+    <div class="mx-auto px-4 max-w-4xl h-full">
       <div class="py-5 text-center">
+        <h1 class="text-5xl font-extrabold"><%= @post.title %></h1>
         <p class="text-sm">
           <dt class="sr-only">Published on</dt>
-          <dd class="text-base font-medium leading-6 text-white/50">
+          <dd class="text-base font-medium leading-6">
             <time datetime={@post.date}><%= @post.date %></time>
           </dd>
         </p>
-        <h1 class="text-5xl font-extrabold"><%= @post.title %></h1>
       </div>
 
-      <div class="prose py-8 max-w-4xl text-lg">
+      <div class="prose pb-8 max-w-4xl text-lg">
         <%= raw(@post.body) %>
       </div>
     </div>
