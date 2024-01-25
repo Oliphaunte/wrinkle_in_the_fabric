@@ -8,50 +8,27 @@ description: "Working with localization has always been one of those necessary, 
 
 ## Intro
 
-Web devs have been stuck in a weird medium for a while. We have control over one of the most powerful tools to communicate products, news, messages and so much more to the entire world, and yet, when it came to building high-performant and intensive apps, we had to sit on our hands and wait for the low-level language professionals to step in and steal the limelight. If only there was a way for us to build low-level applications directly into the browser!
+Localization, along with accessibility, are two of the most commonly overlooked aspects of web development. Fortunately, as technologies get more evolved and companies more established, both implementations are starting to gain promience and importance in their implmenetation. Accessibility has always been an important topic of conversation for me, but I will save that conversation for another post. Here, I wish to talk about a relevant experience I had regarding lozalization, and how it made me realize that AI will have an ever growing importance in helping us provide solutions to overlooked issues.
 
-Rust and WebAssembly come to our rescue to make this dream a reality. Now, we finally have fine-grained and high-performant techonologies at our fingers direct on the web, allowing us to accomplish goals that previously were reserved for mobile and application devs only.
+## What is localization?
 
-As time goes on, we will continue to see the rise of these two technologies and maybe even supplant the necessity for different mediums to host our applications on (looking at you, Swift and Java). Unlikely, but you never know.
+Seems like a silly question, but it is a topic of conversation I realize a lot of devs know about, but do not actually know how to talk about. A majority of devs are familiar with working with English, as well as their own native languages, but the implementation of other localities sometimes takes a back seat in implementation.
 
-I will be showing the use case and simplicity in which we can now build highly-performant web apps, with Phoenix Liveview, a relatively new kid on the web framework block, and Rust with WASM. A unison of two of the most powerful technologies and a boon to web devs everywhere!
+Most companies focus on their immmediate market, which means a narrowness in locality support.
 
-To begin, we will be building a very basic Rich Text Editor within Rust, and pass it into Liveview for immediate consumption. This project is currently ongoing, with the intention of eventually using it to write these very blog posts!
+This is understandble to a certain extent. Websites in North America look fundamentally different from those in Asia, Europe, even South America.
 
-## Installations
+<!-- <div class="post-images">
+  <image src="/images/blog/bk-japan.png" alt="burger_king_japan" />
+  <image src="/images/blog/bk-america.png" alt="burger_king_america" />
+</div> -->
 
-Make sure you have the latest version of elixir/erlang and phoenix installed. I will skip over the details of this, but I will say I personally use asdf to manage the elixir/erlang version and run the installations from the phoenix page to get that setup.
+But there is no reason for companies to shy away from providing international support, even if those are not their target markets. After all, the only thing worse than being talked about, is not being talked about!
 
-You will then want to install rust, I recommend using `rustup` and that is the mot straightforward approach.
+So, let's deep dive into what exactly localization is, and how we can make it part of our arsenal of toolkits!
 
-## Setup Liveview
+(I will preface this by saying that having a dedicated lozalization team is ideal, but obviously beyond the scope of most companies. If you have the resources and capabilities though, it is definitely a recommended route)
 
-To start, let's create our phoenix application (We won't need a db for this project, not yet, at least):
+## Implementation
 
-`mix phx.new rrte --no-ecto`
-
-Once create, cd into the folder and go ahead and run:
-
-`mix phx.server`
-
-Your server should start and you should be able to visit the localhost url and see your beautiful phoenix application!
-
-## Setup Rust
-
-Now, let's go ahead and intiailize the Rust setup.
-
-We will have our Rust application live within our phoenix application to demonstrate how we can create a simplistic WASM pipeline within our Phoenix app for future use.
-
-Go ahead and a `vendor/` folder at the root of your Phoenix application
-
-Inside that, we are going to now run cargo and create our Rust project as a lib (so we consume the binary):
-
-`cargo new rust_text_editor --lib`
-
-## Setup typescript
-
-One of the additional features we will want to setup, is TypeScript. Now, the nice thing about LiveView is that opposed to most other JS frameworks, out interaction to JS is more limited, but we still have the capability of utilizing it when necessary via Hooks, which we will make use of for this project.
-
-Before that, let's setup TypeScript.
-
-I have a separate post dedicated to this process, so if you haven't yet setup typescript, [feel free to go over here and set it up](/posts/setup-typescript-in-phoenix)
+TBD

@@ -1,15 +1,15 @@
 <main class="px-4 py-20 mx-auto max-w-4xl sm:px-6 lg:px-8">
   <div class="relative flex justify-center items-center h-full w-full">
-    <div class="page-container bg-red-100">
-      <header class="w-full px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between w-full">
+    <div id="nav-header" phx-hook="StickyHeader" class="scroll-container page-container bg-red-100">
+      <header class="w-full px-4 sm:px-6 lg:px-8 rounded-lg bg-transparent sticky-header">
+        <nav role="navigation" class="flex justify-between w-full">
           <.link class="header" patch={~p"/"}>Posts</.link>
           <.link class="header" patch={~p"/"}>
             <span class="part part-w">W</span><span class="part part-w-expand">rinkleInThe</span>
             <span class="part part-f">F</span><span class="part part-f-expand">abric</span>
           </.link>
           <.link class="header" href="https://github.com/Oliphaunte" target="_blank">Work</.link>
-        </div>
+        </nav>
       </header>
 
       <.flash_group flash={@flash} />

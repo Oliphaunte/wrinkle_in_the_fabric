@@ -147,6 +147,33 @@ html {
   }
 }
 
+.bg-active header {
+  @apply bg-white; /* Background and shadow when active */
+}
+
+.post-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px; /* Adjust the gap between grid items as needed */
+}
+
+/* Media query for tablet-sized screens (adjust the breakpoint as needed) */
+@media (max-width: 768px) {
+  .post-images {
+    grid-template-columns: 1fr; /* Single column for tablet screens */
+  }
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  /* Make header sticky */
+}
+
 #table-of-contents {
   background-color: #f8f8f8;
   border-left: 4px solid #0078d7;
