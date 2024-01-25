@@ -10,7 +10,7 @@ description: "Setting up Rust and WASM in a Phoeinx Liveview project and being p
 
 Web devs have been stuck in a weird medium for a while. We have control over one of the most powerful tools to communicate products, news, messages and so much more to the entire world, and yet, when it came to building high-performant and intensive apps, we had to sit on our hands and wait for the low-level language professionals to step in and steal the limelight. If only there was a way for us to build low-level applications directly into the browser!
 
-Rust and WebAssembly come to our rescue to make this dream a reality. Now, we finally have fine-grained and high-performant techonologies at our fingers direct on the web, allowing us to accomplish goals that previously were reserved for mobile and application devs only.
+Rust and WebAssembly come to our rescue to make this dream a reality. Now, we finally have fine-grained and high-performant technologies at our fingers direct on the web, allowing us to accomplish goals that previously were reserved for mobile and application devs only.
 
 As time goes on, we will continue to see the rise of these two technologies and maybe even supplant the necessity for different mediums to host our applications on (looking at you, Swift and Java). Unlikely, but you never know.
 
@@ -20,13 +20,13 @@ To begin, we will be building a very basic Rich Text Editor within Rust, and pas
 
 ## Installations
 
-Make sure you have the latest version of elixir/erlang and phoenix installed. I will skip over the details of this, but I will say I personally use asdf to manage the elixir/erlang version and run the installations from the phoenix page to get that setup.
+Make sure you have the latest version of Elixir/Erlang and Phoenix installed. I will skip over the details of this, but I will say I personally use asdf to manage the Elixir/Erlang version and run the installations from the Phoenix page to get that setup.
 
 You will then want to install rust, I recommend using `rustup` and that is the mot straightforward approach.
 
 ## Setup Liveview
 
-To start, let's create our phoenix application (We won't need a db for this project, not yet, at least):
+To start, let's create our Phoenix application (We won't need a db for this project, not yet, at least):
 
 `mix phx.new rrte --no-ecto`
 
@@ -48,10 +48,10 @@ Inside that, we are going to now run cargo and create our Rust project as a lib 
 
 `cargo new rust_text_editor --lib`
 
-## Setup typescript
+## Setup TypeScript
 
-One of the additional features we will want to setup, is TypeScript. Now, the nice thing about LiveView is that opposed to most other JS frameworks, out interaction to JS is more limited, but we still have the capability of utilizing it when necessary via Hooks, which we will make use of for this project.
+One of the additional features we will want to setup, is TypeScript. Now, the nice thing about LiveView is that opposed to most other JS frameworks, our interaction to JS is more limited, but we still have the capability of utilizing it when necessary via Hooks, which we will make use of for this project.
 
 Before that, let's setup TypeScript.
 
-I have a separate post dedicated to this process, so if you haven't yet setup typescript, [feel free to go over here and set it up](/posts/setup-typescript-in-phoenix)
+I have a separate post dedicated to this process, so if you haven't yet setup TypeScript, [feel free to go over here and set it up](/posts/setup-typescript-in-phoenix)

@@ -35,7 +35,7 @@ Inside of the `assets/` folder, you will want to add a `tsconfig.json` file and 
 }
 ```
 
-Now, inside of `assets/js` rename `app.js` to `app.tsx` and also add a new file called `types.ts`. This file is essential to help TypeScript understand Liveview specifics. Inside that file, you can insert the following:
+Now, inside the `assets/js` rename `app.js` to `app.tsx` and also add a new file called `types.ts`. This file is essential to help TypeScript understand Liveview specifics. Inside that file, you can insert the following:
 
 ```
 import { LiveSocket } from "phoenix_live_view";
@@ -63,7 +63,7 @@ config :esbuild,
 
 We are doing several things here:
 
-- Update the esbuild version, the Phoenix generator is lagging behind the versions a a bit and we need the latest
+- Update the esbuild version, the Phoenix generator is lagging behind the versions a bit and we need the latest
 - Update the target to es2020 (yours is probably set to es2017)
 - Update `js/app.js` to `js/app.tsx`
 
