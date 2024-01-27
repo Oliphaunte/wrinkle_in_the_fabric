@@ -1,5 +1,5 @@
 %{
-title: "Rust, WASM, Liveview, Oh my!",
+title: "Rust, WASM, Liveview, Oh my! (Chapter 1)",
 tags: ~w(Rust WebAssembly Phoenix Liveview),
 description: "Setting up Rust and WASM in a Phoeinx Liveview project and being part of the future of the web"
 }
@@ -36,6 +36,14 @@ Once create, cd into the folder and go ahead and run:
 
 Your server should start and you should be able to visit the localhost url and see your beautiful phoenix application!
 
+## Setup TypeScript
+
+One of the additional features we will want to setup, is TypeScript. Now, the nice thing about LiveView is that opposed to most other JS frameworks, our interaction to JS is more limited, but we still have the capability of utilizing it when necessary via Hooks, which we will make use of for this project.
+
+Before that, let's setup TypeScript.
+
+I have a separate post dedicated to this process, so if you haven't yet setup TypeScript, [feel free to go over here and set it up](/posts/setup-typescript-in-phoenix)
+
 ## Setup Rust
 
 Now, let's go ahead and intiailize the Rust setup.
@@ -47,11 +55,3 @@ Go ahead and a `vendor/` folder at the root of your Phoenix application
 Inside that, we are going to now run cargo and create our Rust project as a lib (so we consume the binary):
 
 `cargo new rust_text_editor --lib`
-
-## Setup TypeScript
-
-One of the additional features we will want to setup, is TypeScript. Now, the nice thing about LiveView is that opposed to most other JS frameworks, our interaction to JS is more limited, but we still have the capability of utilizing it when necessary via Hooks, which we will make use of for this project.
-
-Before that, let's setup TypeScript.
-
-I have a separate post dedicated to this process, so if you haven't yet setup TypeScript, [feel free to go over here and set it up](/posts/setup-typescript-in-phoenix)

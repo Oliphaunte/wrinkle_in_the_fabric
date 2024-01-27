@@ -58,6 +58,13 @@ defmodule BlogWeb.IndexLive do
           </li>
         </ul>
       </div>
+
+      <div class="flex flex-wrap mt-8">
+        <h2>Projects</h2>
+        <ul>
+          <li><.link href="https://codepen.io/anon/pen/oMJZGe">Shut the Door</.link></li>
+        </ul>
+      </div>
     </div>
     """
   end

@@ -1,7 +1,7 @@
 %{
-title: "Using Contentful and Liveview",
+title: "Using Contentful to avoid Wordpress",
 tags: ~w(contentful liveview),
-description: "Using Contentful and Liveview to create interactive and easily customizable pages"
+description: "Using Contentful and Liveview to create interactive and easily customizable pages that allow us to bring Wordpress functionality into the modern age"
 }
 
 ---

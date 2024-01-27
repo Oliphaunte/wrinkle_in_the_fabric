@@ -118,7 +118,7 @@ html {
     display: inline;
   }
 
-  ol {
+  /* ol {
     list-style: none;
     padding: 0;
     counter-reset: custom-counter;
@@ -144,7 +144,7 @@ html {
 
   ol li p {
     display: inline;
-  }
+  } */
 }
 
 .bg-active header {
@@ -227,6 +227,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
+  /* background: transparent url('/images/galaxy.png') no-repeat top center; */
 }
 
 #spaceTimeCanvas {
@@ -240,14 +241,21 @@ html {
 
 .page-container {
   position: relative;
-  width: calc(100vw - 160px);
-  height: calc(100vh - 160px);
+  width: calc(100vw - 20px);
+  height: calc(100vh - 20px);
   z-index: 999;
   padding: 24px;
   margin: 0 auto;
-  opacity: 80%;
   transition: all 0.3s;
   overflow-y: scroll;
+}
+
+@media (min-width: 768px) {
+  .page-container {
+    width: calc(100vw - 160px);
+    height: calc(100vh - 160px);
+    opacity: 80%;
+  }
 }
 
 .page-container:hover,
@@ -286,7 +294,9 @@ html {
 }
 
 .header:hover .part-w-expand,
-.header:hover .part-f-expand {
+.header:hover .part-f-expand,
+.header:focus .part-w-expand,
+.header:focus .part-f-expand {
   opacity: 1;
   max-width: 200px;
 }
