@@ -1,5 +1,5 @@
 %{
-title: "Working with Localization in Next.js and Liveview",
+title: "Working with Localization in Liveview",
 tags: ~w(Liveview React Localization),
 description: "Working with localization has always been one of those necessary, but overlooked aspects of web development. It's time we talk about how to make localization a standardization in projects"
 }
@@ -16,17 +16,22 @@ Seems like a silly question, but it is a topic of conversation I realize a lot o
 
 Most companies focus on their immediate market, which means a narrowness in locality support.
 
-This is understandable to a certain extent. Websites in North America look fundamentally different from those in Asia, Europe, and even South America.
+This is understandable to a certain extent. Websites in North America look fundamentally different from those in Asia, Europe, and even South America, which also leads companies to have to dedicate resources to re-create their services in multiple, different formats for different regions, which can be costly
 
-<!-- <div class="post-images">
+<div style="margin-top:16px; text-align:center">
   <image src="/images/blog/bk-japan.png" alt="burger_king_japan" />
-  <image src="/images/blog/bk-america.png" alt="burger_king_america" />
-</div> -->
+  <p style="font-size:12px">A screenshot of Burger King Japan</p>
+</div>
 
-But there is no reason for companies to shy away from providing international support, even if those are not their target markets. After all, the only thing worse than being talked about, is not being talked about!
+<div style="margin-top:16px; text-align:center">
+  <image src="/images/blog/bk-america.png" alt="burger_king_america" />
+  <p style="font-size:12px">Compared to the American version. Notice the subtle differences in design</p>
+</div>
+
+A simple solution to this is to have a base website you use that can change localities based on the users location or preferences. You may not yet have the resources to provide a different experience for different regions, but you can at least make it easier for your user to navigate your site in their native language!
 
 So, let's deep dive into what exactly localization is, and how we can make it part of our arsenal of toolkits!
 
 ## Implementation
 
-TBD
+Depending on your tooling and use cases, there are many ways to accomplish localization. I have been playing around with it to some great effect via Contentful, but for the purposes of this article, we will stick to using Liveview and thankfully for us, Phoenix + Liveview provides great support for localization via the Gettext module.

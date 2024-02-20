@@ -1,8 +1,9 @@
 <main class="h-screen px-4 mx-auto max-w-4xl sm:px-6 md:py-20">
   <div class="relative flex justify-center items-center h-full w-full">
     <div id="nav-header" phx-hook="StickyHeader" class="scroll-container page-container bg-red-100">
-      <header class="w-full px-4 sm:px-6 lg:px-8 rounded-lg bg-transparent sticky-header">
-        <nav role="navigation" class="flex justify-between w-full">
+      <header class="w-full bg-transparent sticky-header">
+        <div class="absolute -top-6 left-0 right-0 h-20 bg-red-100 z-[-1]"></div>
+        <nav role="navigation" class="flex justify-between items-center rounded-lg px-4 sm:px-6 lg:px-8">
           <.link class="header" patch={~p"/"}>Posts</.link>
           <.link class="header" patch={~p"/"}>
             <span class="part part-w">W</span><span class="part part-w-expand">rinkleInThe</span>

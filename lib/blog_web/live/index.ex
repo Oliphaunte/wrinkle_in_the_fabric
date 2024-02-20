@@ -59,10 +59,16 @@ defmodule BlogWeb.IndexLive do
         </ul>
       </div>
 
-      <div class="flex flex-wrap mt-8">
-        <h2>Projects</h2>
+      <div class="flex flex-wrap mt-8 pb-8">
+        <h2 class="w-full">Projects</h2>
         <ul>
-          <li><.link href="https://codepen.io/anon/pen/oMJZGe">Shut the Door</.link></li>
+          <li class="mt-2">
+            <.link href="https://codepen.io/anon/pen/oMJZGe">Shut the Door</.link>
+            (A game I frequently used to demo to kids about frontend development)
+          </li>
+          <li class="mt-2">
+            <.link href="https://hex.pm/packages/contentful_elixir">Contentful Elixir</.link>
+          </li>
         </ul>
       </div>
     </div>

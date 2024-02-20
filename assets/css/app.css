@@ -147,13 +147,13 @@ html {
   } */
 }
 
-.bg-active header {
+.bg-active header nav {
   @apply bg-white; /* Background and shadow when active */
 }
 
 .post-images {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  grid-template-columns: 1fr; /* Two equal columns */
   gap: 20px; /* Adjust the gap between grid items as needed */
 }
 

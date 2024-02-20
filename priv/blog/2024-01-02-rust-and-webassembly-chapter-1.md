@@ -46,11 +46,11 @@ I have a separate post dedicated to this process, so if you haven't yet setup Ty
 
 ## Setup Rust
 
-Now, let's go ahead and intiailize the Rust setup.
+Now, let's go ahead and intialize the Rust setup.
 
 We will have our Rust application live within our phoenix application to demonstrate how we can create a simplistic WASM pipeline within our Phoenix app for future use.
 
-Go ahead and a `vendor/` folder at the root of your Phoenix application
+Go ahead and add a `vendor/` folder at the root of your Phoenix application
 
 Inside that, we are going to now run cargo and create our Rust project as a lib (so we consume the binary):
 

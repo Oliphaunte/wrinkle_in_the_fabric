@@ -36,13 +36,11 @@ Trust plays as crucial a role in professional life as it does in personal life. 
 
 Regardless of spouse, friend, family members, or whomeever in your personal life, being considered a trustworthy individual is something we should all hold ourselves highly accountable to.
 
-I have had my trust broken many a times, and have broken others' trust several times as well. Many of those breaks vary in degree, and most can be repaired, but some cannot.
-
-I still recall an incident where I trust an individual with some personal information, only to find out they had intentionally told others about it and embarrased me. We remained friends, but I found that no amount of apology would lead me to trust this person again with any secrets. The damage was done, and the effect was permenant.
+We all, hopefully have not but probably have had, our trust broken, and have broken others' trust several times as well. Many of those breaks vary in degree, and most can be repaired, but some cannot.
 
 Mistakes happen of course, we are all guilty of it, but we must always remember, we never truly understand the value of something until we lose it. Well, how about we just go ahead and understand that trust, is one of those things we should know the value of without losing it?
 
-## Finals conclusions?
+## Final conclusions?
 
 Take a moment to sit back and think about all the people in your life. How many of those individuals do you trust? To what degree do you trust them? Would you trust them with your life? Your secrets? And vice versa with how they think about those questions regarding you?
 

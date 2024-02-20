@@ -1,6 +1,6 @@
 %{
 title: "Setup Typescript in Phoenix Liveview",
-tags: ~w(typescript contentful liveview),
+tags: ~w(typescript liveview),
 description: "Setting up Phoenix Liveview to use TypeScript can be tricky for the faint of heart, but not anymore!"
 }
 
