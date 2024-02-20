@@ -57,8 +57,16 @@
     tab-size: 4;
   }
 
-  code {
+  pre code {
     white-space: pre;
+  }
+
+  p code {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 0 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
 }
 
@@ -116,6 +124,13 @@ html {
 
   ul li p {
     display: inline;
+  }
+
+  a {
+    background-color: #add8e6;
+    color: gray;
+    font-weight: bold;
+    padding: 0 0.5rem;
   }
 
   /* ol {

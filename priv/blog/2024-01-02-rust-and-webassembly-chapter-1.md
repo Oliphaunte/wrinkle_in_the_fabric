@@ -1,5 +1,5 @@
 %{
-title: "Rust, WASM, Liveview, Oh my! (Chapter 1)",
+title: "Rust, WASM, Liveview, Oh my! -- Rich Text Editor (Chapter 1)",
 tags: ~w(Rust WebAssembly Phoenix Liveview),
 description: "Setting up Rust and WASM in a Phoeinx Liveview project and being part of the future of the web"
 }
@@ -22,7 +22,7 @@ To begin, we will be building a very basic Rich Text Editor within Rust, and pas
 
 Make sure you have the latest version of Elixir/Erlang and Phoenix installed. I will skip over the details of this, but I will say I personally use asdf to manage the Elixir/Erlang version and run the installations from the Phoenix page to get that setup.
 
-You will then want to install rust, I recommend using `rustup` and that is the mot straightforward approach.
+You will then want to install rust, I recommend using `rustup` as that is the most straightforward approach.
 
 ## Setup Liveview
 
@@ -55,3 +55,7 @@ Go ahead and add a `vendor/` folder at the root of your Phoenix application
 Inside that, we are going to now run cargo and create our Rust project as a lib (so we consume the binary):
 
 `cargo new rust_text_editor --lib`
+
+## Next Steps
+
+Let's start building our RTE in the next chapter! [Click here to go to Chapter 2](https://wrinkleinthefabric.com/posts/rust-and-webassembly-chapter-2)
