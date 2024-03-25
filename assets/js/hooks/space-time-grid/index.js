@@ -1,7 +1,3 @@
-// A JS hook in Liveview that acted as a proof of concept for implementing WebGL with Phoenix
-// The project was meant to demonstrate interactivity with push events from Liveview, rendering speed and ease, and potentials with WASM and Liveview
-// This project is particularly special to me because it helped me to support us using Elixir/Phoenix/WASM with some very important and difficult projects
-
 import * as THREE from 'three'
 
 export const SpaceTimeGrid = {
@@ -132,6 +128,20 @@ export const SpaceTimeGrid = {
     window.removeEventListener('resize', onWindowResize)
     document.removeEventListener('mousemove', onDocumentMouseMove)
     document.removeEventListener('click', onCanvasClick)
+
+    planeMesh.geometry.dispose()
+    planeMesh.material.dispose()
+    scene.remove(planeMesh)
     renderer.dispose()
+
+    camera = null
+    scene = null
+    renderer = null
+    planeGeometry = null
+    planeMaterial = null
+    planeMesh = null
+    raycaster = null
+    mouse = null
+    uniforms = null
   },
 }

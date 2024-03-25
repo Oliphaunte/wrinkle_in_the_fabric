@@ -56,8 +56,4 @@ Make sure you properly export the js file and expose it through app.js|.tsx We t
 
 The listed code will initialize your firebase account and let you subsequently fire authentication requests which we will get into in the next steps.
 
-TBD
-
-```
-
-```
+## Setup Part 2 - Calling Firebase (Coming soon!)
