@@ -1,3 +1,7 @@
+// A JS hook in Liveview that acted as a proof of concept for implementing WebGL with Phoenix
+// The project was meant to demonstrate interactivity with push events from Liveview, rendering speed and ease, and potentials with WASM and Liveview
+// This project is particularly special to me because it helped me to support us using Elixir/Phoenix/WASM with some very important and difficult projects
+
 import * as THREE from 'three'
 
 export const SpaceTimeGrid = {
@@ -15,15 +19,13 @@ export const SpaceTimeGrid = {
       void main() {
         vec3 pos = position;
         
-        // Gravity well effect based on mouse position
         float distToMouse = distance(pos, u_mouse3D);
-        pos.z += exp(-distToMouse) * 0.9; // Adjust strength as needed
+        pos.z += exp(-distToMouse) * 0.9; 
         
-        // Ripple effect based on click position
         if (u_timeSinceClick >= 0.0) {
           float distToClick = distance(pos.xy, u_clickPosition.xy);
           float rippleEffect = sin(distToClick * 10.0 - u_timeSinceClick * u_rippleSpeed) * exp(-u_timeSinceClick * 0.5);
-          pos.z += rippleEffect * 0.1; // Adjust strength as needed
+          pos.z += rippleEffect * 0.1;
         }
 
         gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
@@ -54,8 +56,8 @@ export const SpaceTimeGrid = {
 
       uniforms = {
         u_mouse3D: { value: new THREE.Vector3() },
-        u_clickPosition: { value: new THREE.Vector3(10000, 10000, 10000) }, // Initialize offscreen
-        u_timeSinceClick: { value: -1.0 }, // Initialize as negative to indicate no click
+        u_clickPosition: { value: new THREE.Vector3(10000, 10000, 10000) },
+        u_timeSinceClick: { value: -1.0 }, // We have to make this negative to init with a no click
         u_rippleSpeed: { value: 1.0 },
       }
 
@@ -66,6 +68,7 @@ export const SpaceTimeGrid = {
         fragmentShader: fragmentShaderSource,
         wireframe: true,
       })
+
       planeMesh = new THREE.Mesh(planeGeometry, planeMaterial)
 
       scene.add(planeMesh)
@@ -76,7 +79,6 @@ export const SpaceTimeGrid = {
     }
 
     function onDocumentMouseMove(event) {
-      // Convert the mouse position to normalized device coordinates (NDC)
       mouse.x = (event.clientX / window.innerWidth) * 2 - 1
       mouse.y = -(event.clientY / window.innerHeight) * 2 + 1
     }
@@ -84,10 +86,11 @@ export const SpaceTimeGrid = {
     function onCanvasClick(event) {
       raycaster.setFromCamera(mouse, camera)
       const intersects = raycaster.intersectObject(planeMesh)
+
       if (intersects.length > 0) {
         const intersect = intersects[0]
         uniforms.u_clickPosition.value.copy(intersect.point)
-        uniforms.u_timeSinceClick.value = 0.0 // Reset the time since click
+        uniforms.u_timeSinceClick.value = 0.0
       }
     }
 
@@ -102,15 +105,15 @@ export const SpaceTimeGrid = {
     function animate() {
       requestAnimationFrame(animate)
 
-      // Update the mouse position uniform based on raycaster intersection
       raycaster.setFromCamera(mouse, camera)
+
       const intersects = raycaster.intersectObject(planeMesh)
+
       if (intersects.length > 0) {
         const intersect = intersects[0]
         uniforms.u_mouse3D.value.copy(intersect.point)
       }
 
-      // Update time since last click for the ripple effect
       if (uniforms.u_timeSinceClick.value >= 0.0) {
         uniforms.u_timeSinceClick.value += 0.05
       }
@@ -124,6 +127,7 @@ export const SpaceTimeGrid = {
       planeMaterial.needsUpdate = true
     })
   },
+
   destroyed() {
     window.removeEventListener('resize', onWindowResize)
     document.removeEventListener('mousemove', onDocumentMouseMove)
